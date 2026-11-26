@@ -1,4 +1,31 @@
 /* ==========================================================================
+   Self-Hosted Sovereign Fonts (Zero External Trackers / Zero Google CDN Lag)
+   ========================================================================== */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 500 700;
+  font-display: swap;
+  src: url('assets/fonts/cormorant-garamond-normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url('assets/fonts/cormorant-garamond-italic.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url('assets/fonts/plus-jakarta-sans.woff2') format('woff2');
+}
+
+/* ==========================================================================
    Being of Earth — Master Style Sheet
    Aesthetic: Grounded Earthy, Kinesiological Authority (ZachBushMD + JourneyImmersion)
    Typography: Cormorant Garamond (Editorial Elegance) + Plus Jakarta Sans (Clean Modern Sans)
@@ -1614,5 +1641,40 @@ ul {
   .wa-icon-circle {
     width: 50px;
     height: 50px;
+  }
+}
+
+/* ==========================================================================
+   Editorial Scroll Reveals & Deliberate Motion
+   ========================================================================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 {
+  transition-delay: 0.12s;
+}
+
+.reveal-delay-2 {
+  transition-delay: 0.24s;
+}
+
+.reveal-delay-3 {
+  transition-delay: 0.36s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
   }
 }
