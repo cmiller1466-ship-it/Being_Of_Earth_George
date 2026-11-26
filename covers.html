@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDF Cover Concepts | Create the Perfect Workout — Being of Earth</title>
+  
+  <link rel="icon" type="image/png" href="assets/icons/being-of-earth-logo-v2.png">
+
+  <!-- Self-Hosted Sovereign Fonts -->
+  <style>
+    @font-face {
+      font-family: 'Cormorant Garamond';
+      font-style: normal;
+      font-weight: 500 700;
+      src: url('assets/fonts/cormorant-garamond-normal.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Cormorant Garamond';
+      font-style: italic;
+      font-weight: 400 600;
+      src: url('assets/fonts/cormorant-garamond-italic.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Plus Jakarta Sans';
+      font-style: normal;
+      font-weight: 300 700;
+      src: url('assets/fonts/plus-jakarta-sans.woff2') format('woff2');
+    }
+
+    :root {
+      --color-forest-dark: #0e1c15;
+      --color-forest-surface: #14281f;
+      --color-forest-card: #1c3529;
+      --color-gold-sand: #c59b5f;
+      --color-gold-hover: #b3884b;
+      --color-gold-light: #f4ebd9;
+      --color-earth-ochre: #8c6328;
+      --color-moss-green: #2a523e;
+      --color-moss-light: #3d6e55;
+      --color-linen-bg: #f7f5f0;
+      --color-linen-surface: #ede8df;
+      --color-linen-border: #ded8cb;
+      --color-text-primary: #19261f;
+      --color-text-secondary: #53665c;
+      --color-text-light: #f0f5f2;
+      --color-text-muted: #a3baa0;
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--color-linen-bg);
+      color: var(--color-text-primary);
+      line-height: 1.6;
+      padding-bottom: 80px;
+    }
+
+    /* Top Sticky Navigation */
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(14, 28, 21, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(197, 155, 95, 0.3);
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+    }
+    .nav-logo {
+      height: 36px;
+      width: auto;
+    }
+    .nav-title {
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+    .nav-title span {
+      color: var(--color-gold-sand);
+    }
+    .nav-links {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+    .nav-btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .nav-btn-outline {
+      border: 1px solid rgba(197, 155, 95, 0.5);
+      color: var(--color-gold-light);
+    }
+    .nav-btn-outline:hover {
+      background: rgba(197, 155, 95, 0.15);
+      border-color: var(--color-gold-sand);
+    }
+    .nav-btn-solid {
+      background: var(--color-gold-sand);
+      color: var(--color-forest-dark);
+    }
+    .nav-btn-solid:hover {
+      background: var(--color-gold-hover);
+    }
+
+    /* Hero Header */
+    .hero-header {
+      background: var(--color-forest-dark);
+      color: #ffffff;
+      padding: 60px 24px 50px;
+      text-align: center;
+      border-bottom: 2px solid var(--color-gold-sand);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-header::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(circle at 50% 30%, rgba(42, 82, 62, 0.4) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-container {
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+    .hero-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--color-gold-sand);
+      background: rgba(197, 155, 95, 0.12);
+      border: 1px solid rgba(197, 155, 95, 0.35);
+      padding: 6px 18px;
+      border-radius: 999px;
+      margin-bottom: 18px;
+    }
+    .hero-title {
+      font-family: var(--font-serif);
+      font-size: 44px;
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--color-gold-light);
+      margin-bottom: 14px;
+    }
+    .hero-subtitle {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 20px;
+      color: #d1ded6;
+      max-width: 720px;
+      margin: 0 auto 24px;
+      line-height: 1.4;
+    }
+    .hero-meta {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      font-size: 12px;
+      color: var(--color-text-muted);
+      flex-wrap: wrap;
+    }
+    .hero-meta strong {
+      color: var(--color-gold-sand);
+    }
+
+    /* Filter / Tab Bar */
+    .tab-bar-wrap {
+      background: #ffffff;
+      border-bottom: 1px solid var(--color-linen-border);
+      padding: 16px 24px;
+    }
+    .tab-bar {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+      scrollbar-width: thin;
+    }
+    .tab-btn {
+      background: transparent;
+      border: 1px solid var(--color-linen-border);
+      border-radius: 999px;
+      padding: 8px 18px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-text-secondary);
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+      font-family: var(--font-sans);
+    }
+    .tab-btn:hover {
+      border-color: var(--color-moss-green);
+      color: var(--color-forest-dark);
+    }
+    .tab-btn.active {
+      background: var(--color-forest-dark);
+      color: var(--color-gold-sand);
+      border-color: var(--color-forest-dark);
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 1260px;
+      margin: 40px auto 0;
+      padding: 0 24px;
+    }
+
+    /* Section Intro */
+    .section-intro {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .section-intro h2 {
+      font-family: var(--font-serif);
+      font-size: 32px;
+      color: var(--color-forest-dark);
+      margin-bottom: 8px;
+    }
+    .section-intro p {
+      color: var(--color-text-secondary);
+      max-width: 650px;
+      margin: 0 auto;
+      font-size: 15px;
+    }
+
+    /* Grid of Concepts */
+    .covers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 36px;
+      margin-bottom: 60px;
+    }
+
+    .cover-card {
+      background: #ffffff;
+      border: 1px solid var(--color-linen-border);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(14, 28, 21, 0.06);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .cover-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 45px rgba(14, 28, 21, 0.12);
+    }
+
+    /* Cover Thumbnail Container */
+    .cover-preview-box {
+      background: #111;
+      padding: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 1px solid var(--color-linen-border);
+      position: relative;
+    }
+    .cover-img {
+      width: 100%;
+      max-width: 310px;
+      height: auto;
+      aspect-ratio: 8.5 / 11;
+      border-radius: 4px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    .cover-img:hover {
+      transform: scale(1.02);
+    }
+    .zoom-hint {
+      position: absolute;
+      bottom: 12px;
+      right: 16px;
+      background: rgba(0, 0, 0, 0.75);
+      color: #fff;
+      font-size: 10px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      letter-spacing: 0.05em;
+      pointer-events: none;
+    }
+
+    /* Card Details */
+    .card-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      justify-content: space-between;
+    }
+    .option-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .option-num {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-earth-ochre);
+    }
+    .option-pill {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: var(--color-linen-surface);
+      color: var(--color-forest-dark);
+      padding: 3px 10px;
+      border-radius: 999px;
+    }
+    .option-title {
+      font-family: var(--font-serif);
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--color-forest-dark);
+      margin-bottom: 8px;
+      line-height: 1.2;
+    }
+    .option-desc {
+      font-size: 13.5px;
+      color: var(--color-text-secondary);
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+
+    /* Feature Specs */
+    .spec-list {
+      list-style: none;
+      margin-bottom: 20px;
+      border-top: 1px solid var(--color-linen-surface);
+      padding-top: 12px;
+    }
+    .spec-item {
+      font-size: 12px;
+      color: var(--color-text-primary);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+    }
+    .spec-item strong {
+      color: var(--color-moss-deep);
+      min-width: 75px;
+    }
+
+    /* Card Action Buttons */
+    .card-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: auto;
+      padding-top: 14px;
+      border-top: 1px solid var(--color-linen-surface);
+    }
+    .action-btn {
+      flex: 1;
+      text-align: center;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 12.5px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+    }
+    .action-download {
+      background: var(--color-forest-dark);
+      color: var(--color-gold-sand);
+    }
+    .action-download:hover {
+      background: var(--color-moss-green);
+      color: #ffffff;
+    }
+    .action-preview {
+      border: 1px solid var(--color-linen-border);
+      color: var(--color-text-primary);
+      background: var(--color-linen-surface);
+    }
+    .action-preview:hover {
+      border-color: var(--color-gold-sand);
+      background: #ffffff;
+    }
+
+    /* Full-Screen Lightbox Modal */
+    .modal-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(14, 28, 21, 0.94);
+      z-index: 1000;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      padding: 24px;
+      backdrop-filter: blur(8px);
+    }
+    .modal-overlay.active {
+      display: flex;
+    }
+    .modal-img-wrap {
+      max-height: 90vh;
+      max-width: 90vw;
+      position: relative;
+    }
+    .modal-img {
+      max-height: 85vh;
+      max-width: 85vw;
+      border-radius: 6px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+      display: block;
+    }
+    .modal-close {
+      position: absolute;
+      top: -40px;
+      right: 0;
+      background: transparent;
+      border: none;
+      color: #ffffff;
+      font-size: 32px;
+      cursor: pointer;
+      font-weight: 300;
+    }
+
+    /* Comparison Table Section */
+    .comparison-section {
+      background: #ffffff;
+      border: 1px solid var(--color-linen-border);
+      border-radius: 12px;
+      padding: 36px 30px;
+      margin-top: 40px;
+    }
+    .table-title {
+      font-family: var(--font-serif);
+      font-size: 28px;
+      color: var(--color-forest-dark);
+      margin-bottom: 8px;
+    }
+    .table-subtitle {
+      font-size: 14px;
+      color: var(--color-text-secondary);
+      margin-bottom: 24px;
+    }
+    .table-wrap {
+      overflow-x: auto;
+    }
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      text-align: left;
+    }
+    .comparison-table th {
+      background: var(--color-linen-surface);
+      padding: 12px 16px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-moss-deep);
+      border-bottom: 2px solid var(--color-gold-sand);
+    }
+    .comparison-table td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--color-linen-surface);
+      color: var(--color-text-primary);
+    }
+    .comparison-table tr:hover {
+      background: rgba(247, 245, 240, 0.5);
+    }
+    .rec-badge {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .rec-top {
+      background: rgba(197, 155, 95, 0.2);
+      color: var(--color-earth-ochre);
+      border: 1px solid var(--color-gold-sand);
+    }
+    .rec-solid {
+      background: rgba(42, 82, 62, 0.12);
+      color: var(--color-moss-deep);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-title { font-size: 32px; }
+      .hero-subtitle { font-size: 17px; }
+      .covers-grid { grid-template-columns: 1fr; }
+      .nav-title span { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Sticky Navigation -->
+  <nav class="top-nav">
+    <a href="index.html" class="nav-brand">
+      <img src="assets/icons/being-of-earth-logo-h2.png" alt="Being of Earth" class="nav-logo">
+      <div class="nav-title">Being of Earth <span>· PDF Cover Review</span></div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-btn nav-btn-outline">Option A: Main Site</a>
+      <a href="diagnostic.html" class="nav-btn nav-btn-outline">Option B: Diagnostic</a>
+      <a href="#comparison" class="nav-btn nav-btn-solid">Executive Matrix</a>
+    </div>
+  </nav>
+
+  <!-- Hero Header -->
+  <header class="hero-header">
+    <div class="hero-container">
+      <div class="hero-badge">Brand Evolution · Creative Review</div>
+      <h1 class="hero-title">Create The Perfect Workout</h1>
+      <p class="hero-subtitle">
+        5 alternative cover designs incorporating the verbiage, typography, and environmental aesthetic of the new Being of Earth brand.
+      </p>
+      <div class="hero-meta">
+        <div><strong>Author:</strong> George Chountalos</div>
+        <div><strong>Format:</strong> 8.5" × 11" US Letter (Print & Digital PDF)</div>
+        <div><strong>Resolution:</strong> 1700 × 2200 px (300 DPI Equivalent)</div>
+        <div><strong>Typography:</strong> Cormorant Garamond & Plus Jakarta Sans</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Filter / Tab Navigation -->
+  <div class="tab-bar-wrap">
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="filterCovers('all')">Show All 5 Options</button>
+      <button class="tab-btn" onclick="filterCovers('1')">Option 1: Nature Sanctuary</button>
+      <button class="tab-btn" onclick="filterCovers('2')">Option 2: Minimalist Monograph</button>
+      <button class="tab-btn" onclick="filterCovers('3')">Option 3: Kinetic Field Manual</button>
+      <button class="tab-btn" onclick="filterCovers('4')">Option 4: Earth & Sky Heritage</button>
+      <button class="tab-btn" onclick="filterCovers('5')">Option 5: Mentor's Signature</button>
+    </div>
+  </div>
+
+  <!-- Main Showcase Container -->
+  <main class="container">
+
+    <div class="section-intro">
+      <h2>Select Your Preferred Direction</h2>
+      <p>
+        Click any cover to inspect full-screen in high definition. Each option solves the gym-versus-nature disconnect while anchoring George's 5-phase routine in intellectual kinesiology authority.
+      </p>
+    </div>
+
+    <!-- The 5 Covers Grid -->
+    <div class="covers-grid">
+
+      <!-- OPTION 1 -->
+      <div class="cover-card" data-cover="1">
+        <div class="cover-preview-box">
+          <img src="assets/images/covers/cover-option-1.png" alt="Cover Option 1: The Nature Sanctuary" class="cover-img" onclick="openModal('assets/images/covers/cover-option-1.png')">
+          <div class="zoom-hint">Click to Zoom</div>
+        </div>
+        <div class="card-body">
+          <div>
+            <div class="option-header">
+              <span class="option-num">Concept 01</span>
+              <span class="option-pill">Editorial Immersion</span>
+            </div>
+            <h3 class="option-title">The Nature Sanctuary</h3>
+            <p class="option-desc">
+              Full-bleed aerial canopy photography of emerald water and lush forest. Anchored by gold serif typography, fine framed rules, and a 5-phase protocol pill ribbon.
+            </p>
+            <ul class="spec-list">
+              <li class="spec-item"><strong>Mood:</strong> Restorative, grounded, majestic, serene.</li>
+              <li class="spec-item"><strong>Hero Hook:</strong> “Ditch the ego. Restore kinetic flow. Move pain-free for life.”</li>
+              <li class="spec-item"><strong>Best For:</strong> Direct aesthetic parity with the website’s hero section.</li>
+            </ul>
+          </div>
+          <div class="card-actions">
+            <a href="assets/images/covers/cover-option-1.png" download="Being-of-Earth-Cover-Option-1.png" class="action-btn action-download">
+              Download PNG
+            </a>
+            <a href="covers/cover-1.html" target="_blank" class="action-btn action-preview">
+              Vector HTML &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- OPTION 2 -->
+      <div class="cover-card" data-cover="2">
+        <div class="cover-preview-box">
+          <img src="assets/images/covers/cover-option-2.png" alt="Cover Option 2: The Minimalist Monograph" class="cover-img" onclick="openModal('assets/images/covers/cover-option-2.png')">
+          <div class="zoom-hint">Click to Zoom</div>
+        </div>
+        <div class="card-body">
+          <div>
+            <div class="option-header">
+              <span class="option-num">Concept 02</span>
+              <span class="option-pill">Zach Bush MD Style</span>
+            </div>
+            <h3 class="option-title">The Minimalist Monograph</h3>
+            <p class="option-desc">
+              Clean warm linen background with classic double-rule architectural borders. Features a crisp inset photo of George teaching spinal anatomy to clients.
+            </p>
+            <ul class="spec-list">
+              <li class="spec-item"><strong>Mood:</strong> Academic, clinical authority, intellectual, restrained.</li>
+              <li class="spec-item"><strong>Hero Hook:</strong> “Stop outsourcing your health. Master your body’s blueprint from the ground up.”</li>
+              <li class="spec-item"><strong>Best For:</strong> Healthcare practitioners, doctors, and thoughtful clients.</li>
+            </ul>
+          </div>
+          <div class="card-actions">
+            <a href="assets/images/covers/cover-option-2.png" download="Being-of-Earth-Cover-Option-2.png" class="action-btn action-download">
+              Download PNG
+            </a>
+            <a href="covers/cover-2.html" target="_blank" class="action-btn action-preview">
+              Vector HTML &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- OPTION 3 -->
+      <div class="cover-card" data-cover="3">
+        <div class="cover-preview-box">
+          <img src="assets/images/covers/cover-option-3.png" alt="Cover Option 3: The Kinetic Field Manual" class="cover-img" onclick="openModal('assets/images/covers/cover-option-3.png')">
+          <div class="zoom-hint">Click to Zoom</div>
+        </div>
+        <div class="card-body">
+          <div>
+            <div class="option-header">
+              <span class="option-num">Concept 03</span>
+              <span class="option-pill">Tactical Biomechanics</span>
+            </div>
+            <h3 class="option-title">The Kinetic Field Manual</h3>
+            <p class="option-desc">
+              Matte forest green field manual with subtle alignment watermark rings. Features George performing hands-on fascial release with a full 5-column technical matrix.
+            </p>
+            <ul class="spec-list">
+              <li class="spec-item"><strong>Mood:</strong> High-performance, functional, rigorous, athletic.</li>
+              <li class="spec-item"><strong>Hero Hook:</strong> “Master the 7 primal movement patterns for indestructible joint strength.”</li>
+              <li class="spec-item"><strong>Best For:</strong> Athletes, trainers, and fitness enthusiasts transitioning to longevity.</li>
+            </ul>
+          </div>
+          <div class="card-actions">
+            <a href="assets/images/covers/cover-option-3.png" download="Being-of-Earth-Cover-Option-3.png" class="action-btn action-download">
+              Download PNG
+            </a>
+            <a href="covers/cover-3.html" target="_blank" class="action-btn action-preview">
+              Vector HTML &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- OPTION 4 -->
+      <div class="cover-card" data-cover="4">
+        <div class="cover-preview-box">
+          <img src="assets/images/covers/cover-option-4.png" alt="Cover Option 4: The Earth & Sky Heritage" class="cover-img" onclick="openModal('assets/images/covers/cover-option-4.png')">
+          <div class="zoom-hint">Click to Zoom</div>
+        </div>
+        <div class="card-body">
+          <div>
+            <div class="option-header">
+              <span class="option-num">Concept 04</span>
+              <span class="option-pill">Humanist Heritage</span>
+            </div>
+            <h3 class="option-title">The Earth & Sky Heritage</h3>
+            <p class="option-desc">
+              Classical architectural arch frame anchoring a circular nature portal. Highlights the 4 Pillars of Health (Movement, Nutrition, Resilience, Recovery).
+            </p>
+            <ul class="spec-list">
+              <li class="spec-item"><strong>Mood:</strong> Grounded, organic, timeless, holistic curriculum.</li>
+              <li class="spec-item"><strong>Hero Hook:</strong> “Your body is not a machine to be beaten into submission. It is an ecosystem to be aligned.”</li>
+              <li class="spec-item"><strong>Best For:</strong> Comprehensive holistic wellness and foundational education.</li>
+            </ul>
+          </div>
+          <div class="card-actions">
+            <a href="assets/images/covers/cover-option-4.png" download="Being-of-Earth-Cover-Option-4.png" class="action-btn action-download">
+              Download PNG
+            </a>
+            <a href="covers/cover-4.html" target="_blank" class="action-btn action-preview">
+              Vector HTML &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- OPTION 5 -->
+      <div class="cover-card" data-cover="5">
+        <div class="cover-preview-box">
+          <img src="assets/images/covers/cover-option-5.png" alt="Cover Option 5: The Mentor's Signature Edition" class="cover-img" onclick="openModal('assets/images/covers/cover-option-5.png')">
+          <div class="zoom-hint">Click to Zoom</div>
+        </div>
+        <div class="card-body">
+          <div>
+            <div class="option-header">
+              <span class="option-num">Concept 05</span>
+              <span class="option-pill">Personal Mentorship</span>
+            </div>
+            <h3 class="option-title">The Mentor’s Signature Edition</h3>
+            <p class="option-desc">
+              High-trust editorial layout featuring George in a framed portrait looking towards the title. Includes bulleted 5-phase breakdown and signature seal.
+            </p>
+            <ul class="spec-list">
+              <li class="spec-item"><strong>Mood:</strong> Personal, credible, direct coaching mentorship, authentic.</li>
+              <li class="spec-item"><strong>Hero Hook:</strong> “Stop outsourcing your health. The exact sequence I teach my private clients.”</li>
+              <li class="spec-item"><strong>Best For:</strong> High-ticket coaching lead generation and personal brand loyalty.</li>
+            </ul>
+          </div>
+          <div class="card-actions">
+            <a href="assets/images/covers/cover-option-5.png" download="Being-of-Earth-Cover-Option-5.png" class="action-btn action-download">
+              Download PNG
+            </a>
+            <a href="covers/cover-5.html" target="_blank" class="action-btn action-preview">
+              Vector HTML &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Executive Comparison Matrix Section -->
+    <section class="comparison-section" id="comparison">
+      <h2 class="table-title">Executive Comparison Matrix</h2>
+      <p class="table-subtitle">
+        A strategic breakdown of each cover direction to help George choose the best fit for his audience and goals.
+      </p>
+
+      <div class="table-wrap">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Concept</th>
+              <th>Design Language</th>
+              <th>Primary Audience Perception</th>
+              <th>Strategic Strength</th>
+              <th>Recommendation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>01. Nature Sanctuary</strong></td>
+              <td>Full-bleed forest canopy & emerald lake with gold typography</td>
+              <td>"This is transformative, peaceful, and connected to the earth."</td>
+              <td>100% visual parity with the hero section of the new website.</td>
+              <td><span class="rec-badge rec-top">Top Co-Founder Pick</span></td>
+            </tr>
+            <tr>
+              <td><strong>02. Minimalist Monograph</strong></td>
+              <td>Warm linen, architectural borders, anatomical teaching inset</td>
+              <td>"This is a serious, peer-reviewed clinical field manual."</td>
+              <td>Elevates George from a fitness coach to an intellectual kinesiology authority.</td>
+              <td><span class="rec-badge rec-top">Top Clinical Pick</span></td>
+            </tr>
+            <tr>
+              <td><strong>03. Kinetic Field Manual</strong></td>
+              <td>Matte forest green, alignment watermark, 5-phase matrix grid</td>
+              <td>"This is a high-performance system for pain-free durability."</td>
+              <td>Bridges the athletic crowd without the tacky gym-bro aesthetic.</td>
+              <td><span class="rec-badge rec-solid">Strong Functional Pick</span></td>
+            </tr>
+            <tr>
+              <td><strong>04. Earth & Sky Heritage</strong></td>
+              <td>Classical archway, nature roundel, 4 Pillars insignia</td>
+              <td>"This is a foundational life philosophy, not just a workout."</td>
+              <td>Positions the book as the entry point to the complete Being of Earth ecosystem.</td>
+              <td><span class="rec-badge rec-solid">Balanced Holistic Pick</span></td>
+            </tr>
+            <tr>
+              <td><strong>05. Mentor's Signature</strong></td>
+              <td>Editorial split layout, authentic portrait of George, signature line</td>
+              <td>"George is my trusted mentor and guide to health sovereignty."</td>
+              <td>Puts George front and center, driving maximum trust and direct client retention.</td>
+              <td><span class="rec-badge rec-top">Top Personal Brand</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Full-Screen Lightbox Modal -->
+  <div class="modal-overlay" id="modalOverlay" onclick="closeModal()">
+    <div class="modal-img-wrap" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+      <img src="" alt="Full Resolution Cover" id="modalImg" class="modal-img">
+    </div>
+  </div>
+
+  <script>
+    function filterCovers(concept) {
+      const cards = document.querySelectorAll('.cover-card');
+      const buttons = document.querySelectorAll('.tab-btn');
+      
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      cards.forEach(card => {
+        if (concept === 'all' || card.getAttribute('data-cover') === concept) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    function openModal(imgSrc) {
+      const modal = document.getElementById('modalOverlay');
+      const img = document.getElementById('modalImg');
+      img.src = imgSrc;
+      modal.classList.add('active');
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('modalOverlay');
+      modal.classList.remove('active');
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+  </script>
+
+</body>
+</html>

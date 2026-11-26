@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cover Option 2: The Minimalist Monograph | Being of Earth</title>
+  <style>
+
+  @font-face {
+    font-family: 'Cormorant Garamond';
+    font-style: normal;
+    font-weight: 500 700;
+    src: url('../assets/fonts/cormorant-garamond-normal.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Cormorant Garamond';
+    font-style: italic;
+    font-weight: 400 600;
+    src: url('../assets/fonts/cormorant-garamond-italic.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+    font-weight: 300 700;
+    src: url('../assets/fonts/plus-jakarta-sans.woff2') format('woff2');
+  }
+
+  :root {
+    --color-forest-dark: #0e1c15;
+    --color-forest-surface: #14281f;
+    --color-forest-card: #1c3529;
+    --color-gold-sand: #c59b5f;
+    --color-gold-light: #f4ebd9;
+    --color-gold-hover: #b3884b;
+    --color-earth-ochre: #8c6328;
+    --color-moss-green: #2a523e;
+    --color-moss-light: #3d6e55;
+    --color-linen-bg: #f7f5f0;
+    --color-linen-surface: #ede8df;
+    --color-linen-border: #ded8cb;
+    --color-text-primary: #19261f;
+    --color-text-light: #f0f5f2;
+    --color-text-muted: #a3baa0;
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  html, body {
+    width: 850px;
+    height: 1100px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: var(--font-sans);
+    background: transparent;
+  }
+
+  .cover-canvas {
+    width: 850px;
+    height: 1100px;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+  }
+
+    .cover-2 {
+      background-color: var(--color-linen-bg);
+      background-image: radial-gradient(circle at 50% 20%, rgba(255,255,255,0.7) 0%, rgba(247,245,240,0.95) 70%);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 60px 65px;
+      color: var(--color-text-primary);
+    }
+
+    /* Double-rule Architectural Border Frame */
+    .outer-border {
+      position: absolute;
+      top: 28px;
+      left: 28px;
+      right: 28px;
+      bottom: 28px;
+      border: 1.5px solid var(--color-gold-sand);
+      pointer-events: none;
+    }
+    .inner-border {
+      position: absolute;
+      top: 36px;
+      left: 36px;
+      right: 36px;
+      bottom: 36px;
+      border: 0.5px solid var(--color-linen-border);
+      pointer-events: none;
+    }
+    .corner-ornament {
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      border: 1.5px solid var(--color-earth-ochre);
+    }
+    .corner-tl { top: 24px; left: 24px; border-right: none; border-bottom: none; }
+    .corner-tr { top: 24px; right: 24px; border-left: none; border-bottom: none; }
+    .corner-bl { bottom: 24px; left: 24px; border-right: none; border-top: none; }
+    .corner-br { bottom: 24px; right: 24px; border-left: none; border-top: none; }
+
+    .header-block {
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+    .monograph-series {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--color-earth-ochre);
+      margin-bottom: 8px;
+    }
+    .logo-mark {
+      height: 40px;
+      width: auto;
+      margin: 0 auto 10px;
+      display: block;
+    }
+    .volume-tag {
+      display: inline-block;
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--color-moss-deep);
+      border-top: 1px solid var(--color-linen-border);
+      border-bottom: 1px solid var(--color-linen-border);
+      padding: 3px 14px;
+    }
+
+    .main-content {
+      text-align: center;
+      position: relative;
+      z-index: 2;
+      margin-top: 10px;
+    }
+    .main-title {
+      font-family: var(--font-serif);
+      font-size: 52px;
+      font-weight: 700;
+      line-height: 1.08;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: var(--color-forest-dark);
+      margin-bottom: 14px;
+    }
+    .subtitle {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 22px;
+      line-height: 1.35;
+      color: var(--color-moss-deep);
+      max-width: 580px;
+      margin: 0 auto 24px;
+    }
+
+    /* Architectural Inset Window */
+    .inset-frame {
+      width: 440px;
+      height: 270px;
+      margin: 0 auto;
+      border: 6px solid #ffffff;
+      box-shadow: 0 14px 35px rgba(14, 28, 21, 0.12), 0 2px 6px rgba(14, 28, 21, 0.06);
+      border-radius: 4px;
+      overflow: hidden;
+      position: relative;
+    }
+    .inset-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .inset-caption {
+      font-size: 9.5px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--color-text-secondary);
+      margin-top: 12px;
+    }
+
+    .footer-block {
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+    .credo {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 16px;
+      color: var(--color-forest-dark);
+      margin-bottom: 18px;
+    }
+    .author-divider {
+      width: 48px;
+      height: 1.5px;
+      background: var(--color-gold-sand);
+      margin: 0 auto 14px;
+    }
+    .author-name {
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--color-forest-dark);
+      margin-bottom: 4px;
+    }
+    .author-title {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-earth-ochre);
+      margin-bottom: 10px;
+    }
+    .field-manual-badge {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-moss-light);
+    }
+  </style>
+</head>
+<body>
+  <div class="cover-canvas cover-2">
+    <div class="outer-border"></div>
+    <div class="inner-border"></div>
+    <div class="corner-ornament corner-tl"></div>
+    <div class="corner-ornament corner-tr"></div>
+    <div class="corner-ornament corner-bl"></div>
+    <div class="corner-ornament corner-br"></div>
+
+    <div class="header-block">
+      <div class="monograph-series">The Being of Earth Monograph Series</div>
+      <img src="../assets/icons/being-of-earth-logo-v2.png" alt="Being of Earth Emblem" class="logo-mark">
+      <div class="volume-tag">Volume I · Foundational Movement Kinesiology</div>
+    </div>
+
+    <div class="main-content">
+      <h1 class="main-title">Create The<br>Perfect Workout</h1>
+      <p class="subtitle">The 5-phase blueprint for functional joint longevity, kinetic freedom, and biological sovereignty.</p>
+
+      <div class="inset-frame">
+        <img src="../assets/images/spine-alignment-exercise.jpg" alt="Spinal Kinetic Decompression" class="inset-img">
+      </div>
+      <div class="inset-caption">Fig. 1.0 — Kinetic Spinal Decompression & Neuromuscular Alignment</div>
+    </div>
+
+    <div class="footer-block">
+      <div class="credo">“Stop outsourcing your health. Master your body’s blueprint from the ground up.”</div>
+      <div class="author-divider"></div>
+      <div class="author-name">George Chountalos</div>
+      <div class="author-title">Holistic Kinesiologist & Movement Mentor</div>
+      <div class="field-manual-badge">36-Page Practitioner Field Manual · Official First Edition</div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cover Option 3: The Kinetic Field Manual | Being of Earth</title>
+  <style>
+
+  @font-face {
+    font-family: 'Cormorant Garamond';
+    font-style: normal;
+    font-weight: 500 700;
+    src: url('../assets/fonts/cormorant-garamond-normal.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Cormorant Garamond';
+    font-style: italic;
+    font-weight: 400 600;
+    src: url('../assets/fonts/cormorant-garamond-italic.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+    font-weight: 300 700;
+    src: url('../assets/fonts/plus-jakarta-sans.woff2') format('woff2');
+  }
+
+  :root {
+    --color-forest-dark: #0e1c15;
+    --color-forest-surface: #14281f;
+    --color-forest-card: #1c3529;
+    --color-gold-sand: #c59b5f;
+    --color-gold-light: #f4ebd9;
+    --color-gold-hover: #b3884b;
+    --color-earth-ochre: #8c6328;
+    --color-moss-green: #2a523e;
+    --color-moss-light: #3d6e55;
+    --color-linen-bg: #f7f5f0;
+    --color-linen-surface: #ede8df;
+    --color-linen-border: #ded8cb;
+    --color-text-primary: #19261f;
+    --color-text-light: #f0f5f2;
+    --color-text-muted: #a3baa0;
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  html, body {
+    width: 850px;
+    height: 1100px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: var(--font-sans);
+    background: transparent;
+  }
+
+  .cover-canvas {
+    width: 850px;
+    height: 1100px;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+  }
+
+    .cover-3 {
+      background-color: var(--color-forest-dark);
+      background-image: 
+        radial-gradient(circle at 85% 15%, rgba(42, 82, 62, 0.4) 0%, transparent 60%),
+        radial-gradient(circle at 15% 85%, rgba(197, 155, 95, 0.15) 0%, transparent 50%);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 55px 60px;
+      color: #ffffff;
+    }
+
+    /* Biomechanical Alignment Watermark */
+    .bio-watermark {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 650px;
+      height: 650px;
+      border: 1px dashed rgba(197, 155, 95, 0.12);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .bio-watermark::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: rgba(197, 155, 95, 0.08);
+    }
+    .bio-watermark::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 1px;
+      background: rgba(197, 155, 95, 0.08);
+    }
+
+    .header-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      padding-bottom: 18px;
+      position: relative;
+      z-index: 2;
+    }
+    .header-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .header-logo {
+      height: 34px;
+      width: auto;
+    }
+    .header-tag {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--color-gold-sand);
+    }
+    .header-pill {
+      background: rgba(42, 82, 62, 0.5);
+      border: 1px solid var(--color-gold-sand);
+      padding: 5px 12px;
+      border-radius: 4px;
+      font-size: 9.5px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--color-gold-light);
+    }
+
+    .middle-section {
+      position: relative;
+      z-index: 2;
+      margin: 20px 0;
+    }
+    .category-label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--color-gold-sand);
+      margin-bottom: 8px;
+    }
+    .main-title {
+      font-family: var(--font-serif);
+      font-size: 64px;
+      font-weight: 700;
+      line-height: 0.98;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      color: #ffffff;
+      margin-bottom: 14px;
+    }
+    .main-title .highlight {
+      color: var(--color-gold-sand);
+    }
+    .subtitle {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 22px;
+      line-height: 1.35;
+      color: var(--color-text-muted);
+      max-width: 600px;
+      margin-bottom: 24px;
+    }
+
+    /* Tactical Photo Window */
+    .tactical-window {
+      width: 100%;
+      height: 250px;
+      border: 1px solid rgba(197, 155, 95, 0.35);
+      background: #000;
+      position: relative;
+      overflow: hidden;
+      border-radius: 4px;
+    }
+    .tactical-window img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.78;
+      filter: contrast(1.1) brightness(0.95);
+    }
+    .window-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(90deg, rgba(14,28,21,0.7) 0%, transparent 60%);
+      display: flex;
+      align-items: flex-end;
+      padding: 16px 20px;
+    }
+    .window-badge {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-gold-sand);
+      background: rgba(14, 28, 21, 0.85);
+      padding: 4px 10px;
+      border-left: 2px solid var(--color-gold-sand);
+    }
+
+    /* Tactical 5-Phase Matrix */
+    .matrix-container {
+      position: relative;
+      z-index: 2;
+    }
+    .matrix-title {
+      font-size: 9.5px;
+      font-weight: 700;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--color-gold-sand);
+      margin-bottom: 10px;
+    }
+    .matrix-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+      margin-bottom: 22px;
+    }
+    .matrix-cell {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 10px 8px;
+      border-radius: 4px;
+      text-align: center;
+    }
+    .cell-num {
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--color-gold-sand);
+      margin-bottom: 2px;
+    }
+    .cell-name {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin-bottom: 2px;
+    }
+    .cell-time {
+      font-size: 8.5px;
+      color: var(--color-text-muted);
+    }
+
+    .footer-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding-top: 16px;
+    }
+    .author-info {
+      display: flex;
+      flex-direction: column;
+    }
+    .author-name {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+    .author-title {
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-gold-sand);
+    }
+    .lab-stamp {
+      text-align: right;
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="cover-canvas cover-3">
+    <div class="bio-watermark"></div>
+
+    <div class="header-bar">
+      <div class="header-brand">
+        <img src="../assets/icons/being-of-earth-logo-h2.png" alt="Being of Earth" class="header-logo">
+        <span class="header-tag">Movement Research Lab</span>
+      </div>
+      <div class="header-pill">60-Min Protocol</div>
+    </div>
+
+    <div class="middle-section">
+      <div class="category-label">Practitioner Field Manual // No. 01</div>
+      <h1 class="main-title">
+        Create The<br>
+        <span class="highlight">Perfect Workout</span>
+      </h1>
+      <p class="subtitle">
+        Stop outsourcing your health. Master the 7 primal movement patterns for indestructible joint strength.
+      </p>
+
+      <div class="tactical-window">
+        <img src="../assets/images/sports-rehabilitation-stretching.jpg" alt="Functional Movement Training">
+        <div class="window-overlay">
+          <div class="window-badge">Active Fascial Release & Kinetic Chain Loading</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="matrix-container">
+      <div class="matrix-title">The Complete 60-Minute Biomechanical Sequence</div>
+      <div class="matrix-grid">
+        <div class="matrix-cell">
+          <div class="cell-num">01</div>
+          <div class="cell-name">Mobility</div>
+          <div class="cell-time">5 Minutes</div>
+        </div>
+        <div class="matrix-cell">
+          <div class="cell-num">02</div>
+          <div class="cell-name">Release</div>
+          <div class="cell-time">5 Minutes</div>
+        </div>
+        <div class="matrix-cell">
+          <div class="cell-num">03</div>
+          <div class="cell-name">Alignment</div>
+          <div class="cell-time">10 Minutes</div>
+        </div>
+        <div class="matrix-cell">
+          <div class="cell-num">04</div>
+          <div class="cell-name">Resistance</div>
+          <div class="cell-time">30 Minutes</div>
+        </div>
+        <div class="matrix-cell">
+          <div class="cell-num">05</div>
+          <div class="cell-name">Core</div>
+          <div class="cell-time">10 Minutes</div>
+        </div>
+      </div>
+
+      <div class="footer-bar">
+        <div class="author-info">
+          <div class="author-name">George “Hound” Chountalos</div>
+          <div class="author-title">Master Kinesiologist & Movement Coach</div>
+        </div>
+        <div class="lab-stamp">
+          Being of Earth Academy<br>
+          Official Movement Curriculum
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
