@@ -1356,12 +1356,35 @@ img.logo-emblem {
 .faq-arrow {
   font-family: var(--font-sans);
   font-size: 1.5rem;
+  line-height: 1;
   color: var(--color-moss-green);
-  transition: transform 0.2s ease;
+  transition: transform 0.25s ease;
+  flex-shrink: 0;
 }
 
-.faq-item[open] .faq-arrow {
+svg.faq-arrow,
+.faq-arrow svg,
+.faq-question svg.faq-arrow {
+  width: 20px !important;
+  height: 20px !important;
+  min-width: 20px !important;
+  max-width: 20px !important;
+  max-height: 20px !important;
+  flex-shrink: 0 !important;
+  display: inline-block !important;
+  vertical-align: middle;
+}
+
+/* Rotate 45deg for span-based plus icon (+ to x) */
+.faq-item[open] span.faq-arrow {
   transform: rotate(45deg);
+}
+
+/* Rotate 180deg for svg-based chevron icon (down to up) */
+.faq-item[open] svg.faq-arrow,
+.faq-item[open] .faq-arrow svg,
+.faq-item[open] .faq-question svg.faq-arrow {
+  transform: rotate(180deg);
 }
 
 .faq-answer {
