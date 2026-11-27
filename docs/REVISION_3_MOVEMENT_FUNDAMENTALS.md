@@ -44,3 +44,12 @@ All three versions of the Being of Earth front door remain fully intact, interac
 | **Revision 3** | `fundamentals.html` | **Movement Fundamentals & Holistic Intake Edition** (Latest founder vision, 40-page workbook, pain-point diagnostic) | [Open Revision 3](https://cmiller1466-ship-it.github.io/Being_Of_Earth_George/fundamentals.html) |
 | **Revision 2** | `blueprint.html` | **Blueprint & Educational Ecosystem Edition** (11-step sequence, 4 Pillars expansion) | [Open Revision 2](https://cmiller1466-ship-it.github.io/Being_Of_Earth_George/blueprint.html) |
 | **Version 1** | `index.html` | **Baseline Flagship Front Door** (Initial movement-heavy baseline) | [Open Baseline](https://cmiller1466-ship-it.github.io/Being_Of_Earth_George/index.html) |
+
+---
+
+## 3. Mobile UI Polish & Layout Fixes
+* **Diagnostic Step Indicator (Loom Review Fix):** On narrow mobile screens (360px–420px), the unstyled progress text collided with inline step numbers (`12 STEP 1 OF 3: YOUR PRIMARY HEALTH & 3 PAIN POINT`).
+* **Dedicated CSS Design Tokens:** Added `.diag-step-indicator`, `.step-dot` (28x28 circular badge with gold active glow), `.step-line` (connector bar), and `.step-status-text`.
+* **Mobile-First Layout:** On screens under 640px, the progress bar now stacks vertically (`flex-direction: column; align-items: flex-start; gap: 0.75rem;`), placing the circular numbered sequence above the uppercase step status for a clean, spacious mobile presentation.
+* **Cache-Buster:** Bumped to `style.css?v=2.6` across all HTML files to ensure instant edge and browser cache invalidation.
+
