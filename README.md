@@ -28,7 +28,12 @@ Official static front-door website for **Being of Earth** (George Chountalos), e
 
 ---
 
-## Deployment to Cloudflare Pages
+## Near-Term Roadmap & Backlog (To-Do)
+
+* [ ] **Social Media Integrations & Brand Logos:** Add sovereign, lightweight SVG icons and links for George's social channels (YouTube, Instagram, Facebook, LinkedIn, TikTok) in the footer and founder bio section.
+* [ ] **Weekly Content Inbound Flow:** Configure bio links and campaign UTMs for George's weekly social posts to drive cold traffic straight to `blueprint.html` and the 60-Second Diagnostic.
+* [ ] **Custom Domain Cutover:** Route DNS for `www.beingofearth.com` and `beingofearth.com` via Cloudflare Pages edge once George approves final staging.
+
 
 1. **Framework Preset:** None (Static HTML)
 2. **Build Command:** None

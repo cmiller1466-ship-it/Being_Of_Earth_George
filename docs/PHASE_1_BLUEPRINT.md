@@ -34,7 +34,7 @@ go.beingofearth.com  GHL 5-Day Nurture Sequence   Direct personal conversion
 
 ### Strategic Pricing Architecture:
 * **Public Membership:** $45/mo with 14-day free trial. Cancel anytime with 1 click.
-* **Alumni / Legacy Client Rate:** $25/mo locked in for life. Handled via unlisted GHL link / direct WhatsApp outreach to prevent public price cannibalization while seeding the community with high-engagement advocates.
+* **Alumni / Legacy Client Rate:** Handled 100% off-page via private GoHighLevel unlisted checkout links and direct WhatsApp outreach to protect public price anchoring while giving past clients exclusive VIP treatment.
 
 ---
 
@@ -81,16 +81,29 @@ go.beingofearth.com  GHL 5-Day Nurture Sequence   Direct personal conversion
 ### Section 7: Client Transformations / Social Proof
 - Real testimonials & quote cards with avatars (Art Allard, Lisa Marcoux, Layla, etc.) who restored mobility and eliminated chronic pain.
 
-### Section 8: Final Call to Action, Pricing & Legacy Offer
+### Section 8: Final Call to Action & Pricing
 - Bold headline: *Take the Reins of Your Health Today.*
 - `[Start Your 14-Day Free Trial]` button ($45/mo after trial).
-- **Alumni Special Callout:** "Former 1-on-1 Client of George? Get locked-in Legacy Access for just $25/mo via WhatsApp or email."
+- 100% clean public conversion focus.
 
 ### Section 9: FAQ Accordion
-- Native `<details>` tags addressing injury safety, daily time commitment, free trial cancellation, and Legacy $25 rate redemption.
+- Native `<details>` tags addressing injury safety, daily time commitment, free trial cancellation, and equipment requirements.
 
 ### Section 10: Footer & Floating WhatsApp Widget
 - Clean links, copyright, and direct links to:
   - `info@beingofearth.com`
   - WhatsApp: `+52 999-551-8626`
 - Persistent floating WhatsApp quick-chat widget for direct conversions.
+
+---
+
+## 3. Near-Term Roadmap & Upcoming Enhancements
+
+1. **Social Media Architecture & Integration:**
+   - Add clean, self-hosted SVG social media icons (YouTube, Instagram, Facebook, etc.) to the site footer and beneath the "Meet George" bio.
+   - **Conversion Guardrail:** Keep social links subordinate in the footer and bio—never place prominent outbound social links in the top header (which would leak paid/inbound traffic back into social media algorithms before they see the offer).
+2. **Weekly Organic Social Inbound Funnel:**
+   - George posts weekly movement breakdowns / self-assessment prompts on social channels.
+   - Profile links and post CTAs direct followers straight to `www.beingofearth.com` (or `blueprint.html`) to take the interactive 60-Second Blueprint Diagnostic or claim the Free Guide.
+3. **Production Domain Cutover:**
+   - Attach `www.beingofearth.com` to Cloudflare Pages edge DNS.
