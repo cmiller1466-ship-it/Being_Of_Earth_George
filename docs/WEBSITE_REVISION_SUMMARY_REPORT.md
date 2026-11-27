@@ -37,7 +37,7 @@ flowchart TD
     F --> G["7. The Membership (Comprehensive Course Library & Mentorship)"]
     G --> H["8. Meet George (20-Year Evolution & Founder Story)"]
     H --> I["9. Real Stories (Member Transformations & Social Proof)"]
-    I --> J["10. Membership & Pricing ($45/mo Public & $25/mo Legacy)"]
+    I --> J["10. Membership & Pricing ($45/mo Public with 14-Day Free Trial)"]
     J --> K["11. FAQ & Footer (Sovereign Cloudflare Edge Infrastructure)"]
 ```
 
@@ -111,10 +111,10 @@ flowchart TD
 * **Heading:** *"Real Transformations From Real Members"*
 * **Testimonials:** Art Allard (spinal mobility/posture), Lisa Marcoux (scapular mechanics/shoulder confidence), and Layla (nervous system breathwork, digestive vitality, and sustained mental energy).
 
-### Section 10: Pricing & Legacy Architecture
+### Section 10: Pricing Architecture
 * **Headline:** *"Your Personalized Path to Better Health Starts Here"*
 * **Public Tier:** **$45 / month** with a **14-day free trial**. Cancel anytime with 1 click.
-* **Alumni Callout:** Distinct box for former 1-on-1 clients offering the locked-in **$25 / month** Legacy Rate via direct WhatsApp/Email inquiry.
+* **Conversion Protection:** Public page remains 100% focused on cold visitor acquisition. Private alumni or grandfathered rates are handled strictly via unlisted GoHighLevel links.
 
 ---
 
@@ -199,13 +199,13 @@ We adopted George's 3 card headings, but injected grounded, visceral contrast in
 > *"Your Personalized Path to Better Health Starts Here. Get access to the Being of Earth Blueprint, educational courses, practical tools, live coaching, and a supportive community—all designed to help you take greater ownership of your health, happiness, and performance."*
 
 #### What Was Implemented Instead:
-We adopted George's headline, but specifically anchored the pitch to his actual flagship courses: *Assess & Stretch*, *Master Your Core*, *Master Your Mind*, and *Restorative Sleep*, alongside the **Alumni Legacy $25 Rate Callout** which George's document omitted.
+We adopted George's headline, but specifically anchored the pitch to his actual flagship courses: *Assess & Stretch*, *Master Your Core*, *Master Your Mind*, and *Restorative Sleep*. Legacy discounts are strictly decoupled from the public page and handled via private GoHighLevel invitation links.
 
 #### Why George’s Exact Text Was Expanded:
 1. **Perceived Value of Concrete Intellectual Property:**  
    When a cold visitor evaluates $45/month, the phrase *"educational courses"* feels abstract and lightweight. Seeing structured, named proprietary curricula (*Assess & Stretch*, *Master Your Core*, *Master Your Mind*) instantly communicates enterprise-grade value. It transforms the offer from an "app subscription" into a comprehensive digital academy.
-2. **Community Seeding & Alumni Protection:**  
-   George has a loyal, high-trust network of past 1-on-1 personal training clients. Omitting the **$25/month Legacy Client Rate** risks alienating his earliest champions or forcing them into awkward private negotiations. Featuring a dignified, badged callout creates an immediate VIP lane for past clients to seed the new community with high engagement, without diluting the public $45 pricing.
+2. **Anchor Price & Checkout Friction Protection:**  
+   Publicly advertising a $25 legacy rate on a $45 sales page immediately destroys price anchoring and causes new buyers to hesitate or seek coupons. Keeping the public checkout clean at $45 while inviting past clients via private GoHighLevel links gives alumni VIP treatment without cannibalizing cold conversions.
 
 ---
 

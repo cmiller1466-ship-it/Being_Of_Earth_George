@@ -43,7 +43,7 @@ Following the exact progression you recommended, the website now flows logically
         │
 [ 9. Real Stories ] ──> Real Transformations (Spinal mobility, shoulders, nervous system)
         │
-[ 10. Pricing & VIP ] ──> $45/mo Public (14-Day Free Trial) + $25/mo Legacy Alumni Rate
+[ 10. Pricing & Trial ] ──> $45/mo Public (14-Day Free Trial) with 1-click cancellation
         │
 [ 11. FAQ & Footer ] ──> Clear answers on time, safety, trial cancellation, and support
 ```
@@ -135,11 +135,11 @@ To prevent confusion between the free PDF and the paid Blueprint course, we sepa
 
 ---
 
-### Section 10: Pricing & VIP Alumni Architecture
+### Section 10: Pricing & Membership Architecture
 * **Headline:** *"Your Personalized Path to Better Health Starts Here"*
 * Clearly communicates the value of the entire ecosystem before showing the price.
-* **Public Tier:** **$45 / month** with a **14-day free trial**. Cancel anytime with 1 click.
-* **Special Alumni Callout:** A dignified VIP callout for your past 1-on-1 personal training clients offering the locked-in **$25 / month Legacy Rate** via direct WhatsApp or email inquiry.
+* **Public Tier:** **$45 / month** with a prominent **14-day free trial**. Cancel anytime with 1 click.
+* **Clean Public Conversion:** We keep the public page strictly focused on converting new members at your established price. Any private alumni rates or VIP discounts for your past 1-on-1 clients are handled off-page directly via your private GoHighLevel invitation links—ensuring cold prospects never feel like they're missing a coupon or paying more than others.
 
 ---
 
@@ -156,9 +156,10 @@ In marketing and web architecture, small adjustments in phrasing make an enormou
 * When a visitor evaluates paying $45/month, the phrase *"educational courses"* can sound generic.
 * By explicitly listing your course titles—*Assess & Stretch*, *Master Your Core*, *Master Your Mind*—the membership immediately feels like a high-value academy with thousands of dollars of structured intellectual property.
 
-### 3. Why We Added the $25/mo Legacy Rate Callout
-* You have a loyal group of past 1-on-1 clients who trust you deeply. 
-* Featuring a special Alumni box allows you to reach out to them on WhatsApp and invite them in at $25/month for life. This seeds your community with passionate founding members without cannibalizing your public $45/month price.
+### 3. Why Private Alumni / Legacy Rates Are Handled Off-Page
+* You have a loyal group of past 1-on-1 clients who trust you deeply.
+* Rather than advertising a discounted rate publicly on the front sales page—which can cause new prospects to hesitate, look for coupon codes, or feel they are overpaying—we recommend keeping your public price clean at $45/mo. 
+* You can invite your past personal training clients directly via private WhatsApp or GoHighLevel email invitations with their own unlisted checkout link. This makes your past clients feel like true VIPs while protecting your public sales conversions.
 
 ---
 
