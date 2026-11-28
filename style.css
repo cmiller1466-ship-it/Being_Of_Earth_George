@@ -2576,106 +2576,20 @@ img.footer-logo-emblem {
   color: var(--color-text-secondary);
 }
 
-/* --- Pricing Card & Feature Checkmark Fix --- */
-.pricing-card-featured {
-  background: var(--color-linen-card);
-  border: 2px solid var(--color-gold-sand);
+/* --- Pricing Card Harmonization --- */
+.pricing-card {
+  background: var(--color-forest-surface);
+  border: 1px solid var(--color-gold-sand);
   border-radius: var(--radius-card);
-  padding: var(--space-8) var(--space-6);
-  box-shadow: var(--shadow-elevated);
-  max-width: 680px;
-  margin: 0 auto;
+  padding: var(--space-12) var(--space-8);
   text-align: center;
+  box-shadow: var(--shadow-elevated);
 }
 
-@media (min-width: 640px) {
-  .pricing-card-featured {
-    padding: var(--space-12) var(--space-10);
+@media (max-width: 640px) {
+  .pricing-card {
+    padding: var(--space-8) var(--space-5);
   }
-}
-
-.pricing-plan-badge {
-  display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--color-forest-dark);
-  background: var(--color-gold-sand);
-  padding: 0.35rem 0.85rem;
-  border-radius: var(--radius-full);
-  margin-bottom: var(--space-3);
-}
-
-.pricing-plan-title {
-  font-family: var(--font-serif);
-  font-size: 1.85rem;
-  color: var(--color-forest-dark);
-  margin-bottom: var(--space-4);
-}
-
-.pricing-price-wrap {
-  display: flex;
-  align-items: baseline;
-  justify-content: center;
-  gap: 0.35rem;
-  margin-bottom: var(--space-3);
-}
-
-.pricing-currency {
-  font-family: var(--font-serif);
-  font-size: 1.75rem;
-  font-weight: 600;
-  color: var(--color-forest-dark);
-}
-
-.pricing-amount {
-  font-family: var(--font-serif);
-  font-size: 3.5rem;
-  font-weight: 700;
-  line-height: 1;
-  color: var(--color-forest-dark);
-  font-variant-numeric: tabular-nums;
-}
-
-.pricing-period {
-  font-size: 1rem;
-  color: var(--color-text-secondary);
-}
-
-.pricing-trial-lead {
-  font-size: 0.95rem;
-  color: var(--color-text-secondary);
-  margin-bottom: var(--space-6);
-  padding-bottom: var(--space-6);
-  border-bottom: 1px solid var(--color-linen-border);
-}
-
-.pricing-features-list {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-3);
-  margin-bottom: var(--space-8);
-  text-align: left;
-}
-
-.pricing-feature-row {
-  display: flex;
-  align-items: flex-start;
-  gap: var(--space-3);
-  font-size: 0.95rem;
-  color: var(--color-forest-dark);
-  line-height: 1.45;
-}
-
-.feature-check {
-  width: 20px !important;
-  height: 20px !important;
-  min-width: 20px !important;
-  max-width: 20px !important;
-  color: var(--color-moss-green) !important;
-  flex-shrink: 0 !important;
-  margin-top: 2px;
 }
 
 /* --- Section Quote & Founder Bio --- */
