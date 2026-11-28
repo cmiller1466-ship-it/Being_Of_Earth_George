@@ -122,6 +122,9 @@ Every screen, page, and module in Being of Earth belongs strictly to one of two 
   * Clean WhatsApp green (`#25d366`), dark text, pill shape.
 
 ### E. Header & Floating Segmented Nav Dock
+* **Dead-Center Symmetry Law:**
+  * The floating segmented pill dock (`.main-nav`) MUST be positioned **dead center** (`position: absolute; left: 50%; transform: translateX(-50%);`) in the header navbar.
+  * **Architectural Rationale:** The announcement bar above, the hero headline, and the conversion CTAs below are all centered along the page's primary vertical axis of symmetry. Centering the navigation pill dock aligns with this architectural centerline, eliminating any lopsided or off-center appearance.
 * **Dock Architecture:** All primary navigation links and lead-magnet pathways are encapsulated inside a floating pill island (`.nav-pill-dock`):
   * Container: `background: rgba(14, 28, 21, 0.045); border: 1px solid rgba(14, 28, 21, 0.085); border-radius: 9999px; padding: 3px 5px;`
   * Tab Pills: `min-height: 34px; padding: 6px 14px; border-radius: 9999px; font-size: 0.835rem; font-weight: 500;`

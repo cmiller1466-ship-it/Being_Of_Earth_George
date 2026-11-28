@@ -399,13 +399,16 @@ ul {
 }
 
 .nav-wrapper {
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: var(--space-4);
+  justify-content: flex-start;
+  min-height: 44px;
 }
 
 .brand-logo {
+  position: relative;
+  z-index: 2;
   display: flex !important;
   flex-direction: row !important;
   align-items: center !important;
@@ -458,8 +461,12 @@ img.logo-emblem {
 
 /* --- Segmented Nav Dock (Option A) --- */
 .main-nav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   align-items: center;
+  z-index: 1;
 }
 
 .nav-pill-dock {
@@ -519,6 +526,12 @@ img.logo-emblem {
   .nav-links a {
     padding: 5px 10px;
     font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .brand-sub {
+    display: none;
   }
 }
 
