@@ -112,22 +112,26 @@ Every screen, page, and module in Being of Earth belongs strictly to one of two 
 * **Sizing:** Strict `20px x 20px` with `flex-shrink: 0`. Never allow unconstrained inline SVG rendering.
 
 ### D. Buttons & CTAs
-* **Primary Gold Button (`.btn-primary`):**
+* **Primary Gold Nav Pill (`.btn-primary-nav`):**
+  * `background: var(--color-gold-sand); color: var(--color-forest-dark); font-weight: 700; border-radius: var(--radius-full); min-height: 36px; padding: 0 1.25rem; font-size: 0.835rem; box-shadow: 0 2px 6px rgba(197, 155, 95, 0.22);`
+  * Text includes forward arrow: `Start Free Trial &rarr;`
+  * Hover: `background: var(--color-gold-hover); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(197, 155, 95, 0.35);`
+* **Single Focal Point Rule (Desktop & Mobile Header):**
+  * The header action bar (`.nav-actions`) contains **strictly ONE button**—the gold sand pill CTA (`Start Free Trial &rarr;`). Secondary buttons (such as "Free Workbook" or "Free Guide") are prohibited in the header action strip to prevent visual competition, clashing geometries, and choice paralysis.
+* **Hero & Page Primary Gold Button (`.btn-primary`):**
   * `background: var(--color-gold-sand); color: var(--color-forest-dark); font-weight: 700; border-radius: 9999px;`
   * Hover: `background: #b38e4a; transform: translateY(-2px);`
-* **Secondary Moss Button (`.btn-secondary-nav`):**
-  * Light outline on desktop; **hidden on mobile (`<= 640px`)** to preserve a Single Focal Point.
 * **Alumni WhatsApp Button (`.btn-alumni-wa`):**
   * Clean WhatsApp green (`#25d366`), dark text, pill shape.
 
-### E. Header & Floating Segmented Nav Dock (Option A)
-* **Dock Architecture:** All primary educational navigation links are encapsulated inside a floating pill island (`.nav-pill-dock`):
+### E. Header & Floating Segmented Nav Dock (Option A + Play 1)
+* **Dock Architecture:** All primary navigation links and lead-magnet pathways are encapsulated inside a floating pill island (`.nav-pill-dock`):
   * Container: `background: rgba(14, 28, 21, 0.045); border: 1px solid rgba(14, 28, 21, 0.085); border-radius: 9999px; padding: 3px 5px;`
   * Tab Pills: `min-height: 34px; padding: 6px 14px; border-radius: 9999px; font-size: 0.835rem; font-weight: 500;`
   * Hover Illumination: Smooth ease to `background: #ffffff; color: var(--color-forest-dark); box-shadow: 0 2px 8px rgba(14, 28, 21, 0.08); font-weight: 600;`
-* **Zero Redundancy Rule:** Never include links in the nav dock that duplicate adjacent action buttons (e.g. omit "Workbook" and "Membership" when the buttons are "Free Workbook" and "Start Free Trial").
-* **Curated Milestones:** Strictly 5 to 6 concise section milestones (*The Problem, The 4 Pillars, Diagnostic, Curriculum, Meet George, Stories*).
-* **Responsive Breakpoint:** `.main-nav` collapses cleanly at `<= 992px`, keeping the header uncluttered on tablets and mobile.
+* **Integrated Lead Magnet Tab:** The interactive workbook or free guide is integrated directly inside the center pill dock as a first-class tab (`Workbook` / `Free Guide`), eliminating disconnected secondary buttons on the right.
+* **Curated Milestones:** Strictly 6 to 7 concise section milestones (*The Problem, The 4 Pillars, Diagnostic, Workbook, Curriculum, Meet George, Stories*).
+* **Responsive Breakpoint:** `.main-nav` collapses cleanly at `<= 992px`, keeping the header uncluttered on tablets and mobile with the single gold CTA on the right.
 
 ---
 
@@ -173,7 +177,7 @@ Before **any** commit, release, or client handoff is shipped, the following 10 i
 | **3** | **Alumni Sub-Card** | Dashed gold box is present at the base of pricing with working WhatsApp and Email links; zero public mention of $25/mo or legacy pills. |
 | **4** | **Photo Clearance** | No floating badges, text, or pills overlap George's face or body. |
 | **5** | **Icon Scalability** | All checkmarks are 20px stroked outline SVGs (`stroke-width: 2.5`), zero solid black/giant glyphs. |
-| **6** | **Mobile Header Focal Point** | Mobile header (`<= 640px`) contains exactly ONE primary button; secondary button is hidden. |
+| **6** | **Header Focal Point** | Header contains exactly ONE gold pill CTA (`Start Free Trial &rarr;`); lead magnet is integrated into the center dock; zero competing secondary buttons. |
 | **7** | **Above-the-Fold Height** | Mobile hero content is immediately visible without scrolling past bloated banner bars. |
 | **8** | **Missing CSS Audit** | `find_missing_css.py` returns **0 missing classes** across all HTML pages. |
 | **9** | **Tag Balance & Lint** | HTML tag parser reports **0 unclosed tags** and valid DOM structure. |
