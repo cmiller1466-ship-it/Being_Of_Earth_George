@@ -37,6 +37,7 @@
   --space-2: 8px;
   --space-3: 12px;
   --space-4: 16px;
+  --space-5: 20px;
   --space-6: 24px;
   --space-8: 32px;
   --space-12: 48px;
@@ -1884,9 +1885,9 @@ img.footer-logo-emblem {
 .diagnostic-card-wrapper {
   background: #ffffff;
   border: 1px solid rgba(197, 155, 95, 0.28);
-  border-radius: 18px;
-  box-shadow: 0 16px 45px rgba(27, 51, 34, 0.08), 0 2px 8px rgba(0, 0, 0, 0.02);
-  padding: var(--space-6) var(--space-5);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-medium);
+  padding: var(--space-6);
   max-width: 840px;
   margin: var(--space-8) auto 0 auto;
   position: relative;
@@ -1896,8 +1897,7 @@ img.footer-logo-emblem {
 @media (min-width: 640px) {
   .diagnostic-card,
   .diagnostic-card-wrapper {
-    padding: var(--space-10) var(--space-8);
-    border-radius: 22px;
+    padding: var(--space-8);
   }
 }
 
@@ -2260,22 +2260,112 @@ img.footer-logo-emblem {
 
 
 /* ==========================================================================
-   Revision 3: Movement Fundamentals & Holistic Intake Refinements
+   Revision 3: Movement Fundamentals & Cenote UI Standard Polish
    ========================================================================== */
 
-/* --- Four Pillars Quad Grid & Spacing --- */
-.section-pillars {
-  background-color: var(--color-linen-surface);
-  padding: var(--space-20) 0;
-}
-
-@media (max-width: 768px) {
-  .section-pillars {
-    padding: var(--space-14) 0;
+/* --- Mobile Header: Single Focal CTA (Craft Rule 1) --- */
+@media (max-width: 640px) {
+  .btn-secondary-nav {
+    display: none !important;
+  }
+  .nav-actions {
+    gap: 0;
+  }
+  .site-header .container {
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
+  }
+  .brand-logo {
+    gap: var(--space-2) !important;
+  }
+  .brand-name {
+    font-size: 1.15rem !important;
+  }
+  .brand-sub {
+    font-size: 0.625rem !important;
   }
 }
 
-.pillars-quad-grid {
+/* --- Streamlined Top Banners for Mobile Viewports --- */
+@media (max-width: 768px) {
+  .prototype-banner {
+    padding: var(--space-2) var(--space-4);
+    font-size: 0.75rem;
+  }
+  .prototype-banner p {
+    display: none;
+  }
+  .prototype-banner-flex {
+    justify-content: space-between;
+    gap: var(--space-2);
+  }
+  .announcement-bar {
+    padding: var(--space-2) var(--space-4);
+    font-size: 0.78rem;
+  }
+  .announcement-content p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+/* --- Strict 8px Card Padding Across All Sections --- */
+.problem-card {
+  padding: var(--space-8);
+}
+
+.pillar-quad-card {
+  background: #ffffff;
+  border: 1px solid var(--color-linen-border);
+  border-radius: var(--radius-card);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-subtle);
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition-smooth);
+  position: relative;
+}
+
+.pillar-quad-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-elevated);
+  border-color: var(--color-gold-sand);
+}
+
+.testimonial-card {
+  padding: var(--space-8);
+}
+
+.curriculum-card {
+  background: #ffffff;
+  border: 1px solid var(--color-linen-border);
+  border-radius: var(--radius-card);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-subtle);
+  transition: var(--transition-smooth);
+}
+
+.curriculum-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-medium);
+  border-color: var(--color-moss-green);
+}
+
+@media (max-width: 768px) {
+  .problem-card,
+  .pillar-quad-card,
+  .testimonial-card,
+  .curriculum-card {
+    padding: var(--space-6);
+  }
+}
+
+/* --- Unified Grid Gaps (Strict 24px Rhythm) --- */
+.problem-grid,
+.pillars-quad-grid,
+.curriculum-grid,
+.testimonials-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-6);
@@ -2287,6 +2377,21 @@ img.footer-logo-emblem {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-6);
   }
+  .curriculum-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+  }
+}
+
+@media (min-width: 768px) {
+  .problem-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+  }
+  .testimonials-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+  }
 }
 
 @media (min-width: 1024px) {
@@ -2296,30 +2401,13 @@ img.footer-logo-emblem {
   }
 }
 
-.pillar-quad-card {
-  background: #ffffff;
-  border: 1px solid var(--color-linen-border);
-  border-radius: var(--radius-card);
-  padding: var(--space-6) var(--space-5);
-  box-shadow: 0 4px 18px rgba(14, 28, 21, 0.04);
-  display: flex;
-  flex-direction: column;
-  transition: var(--transition-smooth);
-  position: relative;
-}
-
-.pillar-quad-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(14, 28, 21, 0.09);
-  border-color: var(--color-gold-sand);
-}
-
 .pillar-badge-num {
   font-family: var(--font-serif);
   font-size: 1.75rem;
   font-weight: 700;
   color: var(--color-gold-sand);
   line-height: 1;
+  font-variant-numeric: tabular-nums;
   margin-bottom: var(--space-3);
 }
 
@@ -2332,17 +2420,17 @@ img.footer-logo-emblem {
 }
 
 .pillar-core-desc {
-  font-size: 0.92rem;
+  font-size: 0.95rem;
   color: var(--color-text-secondary);
-  line-height: 1.55;
-  margin-bottom: var(--space-5);
+  line-height: 1.6;
+  margin-bottom: var(--space-6);
   flex-grow: 1;
 }
 
 .pillar-features {
   display: flex;
   flex-direction: column;
-  gap: 0.45rem;
+  gap: var(--space-2);
   border-top: 1px solid var(--color-linen-border);
   padding-top: var(--space-4);
   font-size: 0.85rem;
@@ -2350,7 +2438,19 @@ img.footer-logo-emblem {
   font-weight: 500;
 }
 
-/* --- George's Portrait Frame & Border Enhancement --- */
+/* --- Section Pillars Spacing --- */
+.section-pillars {
+  background-color: var(--color-linen-surface);
+  padding: var(--space-20) 0;
+}
+
+@media (max-width: 768px) {
+  .section-pillars {
+    padding: var(--space-14) 0;
+  }
+}
+
+/* --- George's Portrait Frame & Credential Strip (Moved BELOW Photo) --- */
 .about-media-col {
   width: 100%;
 }
@@ -2361,54 +2461,59 @@ img.footer-logo-emblem {
 
 .about-image-card {
   position: relative;
-  border-radius: 20px;
+  border-radius: var(--radius-card);
   overflow: hidden;
-  box-shadow: 0 20px 48px rgba(27, 51, 34, 0.16);
-  border: 4px solid #ffffff;
-  outline: 1.5px solid var(--color-gold-sand);
+  box-shadow: var(--shadow-elevated);
+  border: 3px solid #ffffff;
+  outline: 1px solid rgba(197, 155, 95, 0.35);
   background: var(--color-forest-dark);
 }
 
 .about-portrait-img {
   width: 100%;
   height: auto;
-  max-height: 540px;
+  max-height: 520px;
   object-fit: cover;
   display: block;
-  transition: transform 0.4s ease;
 }
 
-.about-image-card:hover .about-portrait-img {
-  transform: scale(1.02);
-}
-
-.experience-badge {
-  position: absolute;
-  bottom: 1.5rem;
-  right: 1.5rem;
+.about-experience-strip {
+  margin-top: var(--space-4);
   background: var(--color-forest-dark);
   color: #ffffff;
-  padding: var(--space-3) var(--space-5);
-  border-radius: var(--radius-inner);
-  text-align: center;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
-  border: 1.5px solid var(--color-gold-sand);
+  padding: var(--space-4) var(--space-6);
+  border-radius: var(--radius-card);
+  border: 1px solid var(--color-gold-sand);
+  box-shadow: var(--shadow-medium);
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
 }
 
-.exp-years {
-  display: block;
+.about-experience-strip .exp-years {
   font-family: var(--font-serif);
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: var(--color-gold-sand);
   line-height: 1;
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
 }
 
-.exp-text {
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+.exp-text-block strong {
+  display: block;
+  font-size: 0.95rem;
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.exp-text-block span {
+  display: block;
+  font-size: 0.8rem;
   color: var(--color-text-light-muted);
+  line-height: 1.35;
+  margin-top: 2px;
 }
 
 .about-story-text {
@@ -2434,22 +2539,22 @@ img.footer-logo-emblem {
   margin-top: var(--space-6);
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: var(--space-4);
 }
 
-/* --- Testimonials: Avatars & Author Details --- */
+/* --- Testimonials: 56px Avatars (Strict 8px Token) & Author Details --- */
 .testimonial-author {
   display: flex;
   align-items: center;
-  gap: 0.85rem;
-  margin-top: var(--space-5);
+  gap: var(--space-4);
+  margin-top: var(--space-6);
 }
 
 .author-avatar {
-  width: 54px !important;
-  height: 54px !important;
-  min-width: 54px !important;
-  max-width: 54px !important;
+  width: 56px !important;
+  height: 56px !important;
+  min-width: 56px !important;
+  max-width: 56px !important;
   border-radius: 50% !important;
   object-fit: cover !important;
   border: 2px solid var(--color-gold-sand);
@@ -2477,7 +2582,7 @@ img.footer-logo-emblem {
   border: 2px solid var(--color-gold-sand);
   border-radius: var(--radius-card);
   padding: var(--space-8) var(--space-6);
-  box-shadow: 0 16px 40px rgba(14, 28, 21, 0.08);
+  box-shadow: var(--shadow-elevated);
   max-width: 680px;
   margin: 0 auto;
   text-align: center;
@@ -2530,6 +2635,7 @@ img.footer-logo-emblem {
   font-weight: 700;
   line-height: 1;
   color: var(--color-forest-dark);
+  font-variant-numeric: tabular-nums;
 }
 
 .pricing-period {
@@ -2548,7 +2654,7 @@ img.footer-logo-emblem {
 .pricing-features-list {
   display: flex;
   flex-direction: column;
-  gap: 0.85rem;
+  gap: var(--space-3);
   margin-bottom: var(--space-8);
   text-align: left;
 }
@@ -2556,7 +2662,7 @@ img.footer-logo-emblem {
 .pricing-feature-row {
   display: flex;
   align-items: flex-start;
-  gap: 0.75rem;
+  gap: var(--space-3);
   font-size: 0.95rem;
   color: var(--color-forest-dark);
   line-height: 1.45;
@@ -2605,7 +2711,7 @@ img.footer-logo-emblem {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: var(--space-4);
 }
 
 .quote-author-avatar {
@@ -2633,33 +2739,51 @@ img.footer-logo-emblem {
   color: var(--color-gold-sand);
 }
 
-/* --- Curriculum Cards & Workbook Elements --- */
-.curriculum-card {
-  background: #ffffff;
-  border: 1px solid var(--color-linen-border);
-  border-radius: var(--radius-card);
-  padding: var(--space-6);
-  box-shadow: var(--shadow-subtle);
-  transition: var(--transition-smooth);
-}
-
-.curriculum-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-medium);
-  border-color: var(--color-moss-green);
-}
-
-.workbook-subtitle {
-  font-size: 1.1rem;
+/* --- Touch Targets Floor (48px) --- */
+.btn-retake {
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-3) var(--space-6);
+  font-size: 0.9rem;
   color: var(--color-text-secondary);
-  margin-bottom: var(--space-6);
+  text-decoration: underline;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  transition: var(--transition-fast);
 }
 
-.workbook-phases-list {
+.btn-retake:hover {
+  color: var(--color-forest-dark);
+}
+
+.prototype-link {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-1) var(--space-2);
+  color: var(--color-gold-sand);
+  text-decoration: underline;
+  font-size: 0.85rem;
+}
+
+.prototype-link:hover {
+  color: #ffffff;
+}
+
+.prototype-nav-links {
   display: flex;
-  flex-direction: column;
-  gap: 0.65rem;
-  margin-bottom: var(--space-6);
+  gap: var(--space-3);
+  align-items: center;
+}
+
+summary.faq-question {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /* --- Floating WhatsApp & Button Utilities --- */
@@ -2697,15 +2821,6 @@ img.footer-logo-emblem {
 .btn:hover .btn-arrow {
   transform: translateX(4px);
 }
-
-/* --- Responsive Layout & Mobile Section Spacing --- */
-@media (max-width: 768px) {
-  .section {
-    padding-top: var(--space-16);
-    padding-bottom: var(--space-16);
-  }
-}
-
 
 /* --- Additional Component Utilities for Revision 3 --- */
 .announcement-pulse {
@@ -2754,19 +2869,6 @@ img.footer-logo-emblem {
   flex-wrap: wrap;
   gap: var(--space-6);
   margin-top: var(--space-8);
-}
-
-.problem-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-6);
-  margin-top: var(--space-8);
-}
-
-@media (min-width: 768px) {
-  .problem-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
 }
 
 .founder-credentials-row {
@@ -2827,22 +2929,18 @@ img.footer-logo-emblem {
   line-height: 1.4;
 }
 
-.prototype-link {
-  color: var(--color-gold-sand);
-  text-decoration: underline;
-  font-size: 0.85rem;
+.workbook-subtitle {
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-6);
 }
 
-.prototype-link:hover {
-  color: #ffffff;
-}
-
-.prototype-nav-links {
+.workbook-phases-list {
   display: flex;
-  gap: 0.75rem;
-  align-items: center;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
 }
-
 
 /* --- Backward Compatibility Aliases for Earlier Revisions --- */
 .about-image-column {
