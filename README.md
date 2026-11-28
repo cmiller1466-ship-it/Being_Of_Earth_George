@@ -3,6 +3,7 @@
 Official static front-door website for **Being of Earth** (George Chountalos), engineered by Cenote Softworks.
 
 * **Stack:** Pure semantic HTML5 + CSS3 (No runtime JS frameworks, zero telemetry)
+* **Master Design Standard & Quality Specification:** [`docs/BEING_OF_EARTH_DESIGN_STANDARD.md`](docs/BEING_OF_EARTH_DESIGN_STANDARD.md)
 * **Design Standard:** Cenote Softworks UI Standard (`CENOTE_UI_STANDARD.md` — Theme 3: Warm Humanist Heritage)
 * **Hosting:** Cloudflare Pages (Static Edge, $0/mo)
 * **Target Domain:** `www.beingofearth.com` & `beingofearth.com`
