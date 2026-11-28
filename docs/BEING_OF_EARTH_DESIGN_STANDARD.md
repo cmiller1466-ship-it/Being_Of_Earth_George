@@ -120,6 +120,15 @@ Every screen, page, and module in Being of Earth belongs strictly to one of two 
 * **Alumni WhatsApp Button (`.btn-alumni-wa`):**
   * Clean WhatsApp green (`#25d366`), dark text, pill shape.
 
+### E. Header & Floating Segmented Nav Dock (Option A)
+* **Dock Architecture:** All primary educational navigation links are encapsulated inside a floating pill island (`.nav-pill-dock`):
+  * Container: `background: rgba(14, 28, 21, 0.045); border: 1px solid rgba(14, 28, 21, 0.085); border-radius: 9999px; padding: 3px 5px;`
+  * Tab Pills: `min-height: 34px; padding: 6px 14px; border-radius: 9999px; font-size: 0.835rem; font-weight: 500;`
+  * Hover Illumination: Smooth ease to `background: #ffffff; color: var(--color-forest-dark); box-shadow: 0 2px 8px rgba(14, 28, 21, 0.08); font-weight: 600;`
+* **Zero Redundancy Rule:** Never include links in the nav dock that duplicate adjacent action buttons (e.g. omit "Workbook" and "Membership" when the buttons are "Free Workbook" and "Start Free Trial").
+* **Curated Milestones:** Strictly 5 to 6 concise section milestones (*The Problem, The 4 Pillars, Diagnostic, Curriculum, Meet George, Stories*).
+* **Responsive Breakpoint:** `.main-nav` collapses cleanly at `<= 992px`, keeping the header uncluttered on tablets and mobile.
+
 ---
 
 ## 5. Responsive Ceilings & Mobile Geometry
