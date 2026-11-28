@@ -91,16 +91,15 @@ Every screen, page, and module in Being of Earth belongs strictly to one of two 
   * **Desktop:** `48px` vertical, `32px` horizontal (`var(--space-12) var(--space-8)`).
   * **Mobile:** `32px` vertical, `20px` horizontal (`var(--space-8) var(--space-5)`). Never compress below 20px.
 * **Internal Hierarchy (Top to Bottom):**
-  1. **Badge:** Gold pill (`bg: #c5a059`, `color: #0e1c15`, `font-size: 0.75rem`, `font-weight: 700`).
-  2. **Title:** 2.75rem serif white (`#ffffff`).
-  3. **Lead:** 1.15rem soft muted green (`#a3baa0`).
-  4. **Price Block:** Gold `$` (2rem) + White `45` (5rem serif, tabular-nums) + `/ month` (1.25rem).
-  5. **Trial Note:** Gold bold text (`Includes full 14-Day Free Access. Cancel anytime with 1 click.`).
-  6. **Deliverables Divider:** `1px solid var(--color-forest-border)`, padding-top 24px.
-  7. **Feature List:** Left-aligned 580px block with 20px gold outline stroked checkmarks (`stroke-width: 2.5`), light readable text.
-  8. **CTA Button:** Large full-width gold pill (`.btn-primary.btn-block.btn-xl`), height 56px, bold dark text with hover arrow.
-  9. **Trust Micro-Copy:** Soft white 13px line with lock icon.
-  10. **Alumni Legacy Sub-Card:** Dashed gold box (`border: 1px dashed var(--color-gold-sand)`), WhatsApp green button + Email gold outline button.
+  1. **Title:** 2.75rem serif white (`#ffffff`).
+  2. **Lead:** 1.15rem soft muted green (`#a3baa0`).
+  3. **Price Block:** Gold `$` (2rem) + White `45` (5rem serif, tabular-nums) + `/ month` (1.25rem).
+  4. **Trial Note:** Gold bold text (`Includes full 14-Day Free Access. Cancel anytime with 1 click.`).
+  5. **Deliverables Divider:** `1px solid var(--color-forest-border)`, padding-top 24px.
+  6. **Feature List:** Left-aligned 580px block with 20px gold outline stroked checkmarks (`stroke-width: 2.5`), light readable text.
+  7. **CTA Button:** Large full-width gold pill (`.btn-primary.btn-block.btn-xl`), height 56px, bold dark text with hover arrow.
+  8. **Trust Micro-Copy:** Soft white 13px line with lock icon.
+  9. **Alumni Sub-Card:** Dashed gold box (`border: 1px dashed var(--color-gold-sand)`), WhatsApp green button + Email gold outline button. **Zero public mention of $25/mo or legacy discount pills (alumni rates are decoupled and handled 1-on-1 via private link to protect public price anchoring).**
 
 ### B. Founder Portrait & Experience Badges
 * **Photo Frame:** Rounded corners (`16px`), warm subtle border, zero visual clutter directly over the image.
@@ -162,7 +161,7 @@ Before **any** commit, release, or client handoff is shipped, the following 10 i
 | :-: | :--- | :--- |
 | **1** | **Atmosphere Integrity** | Zero white cards inside Atmosphere A (Dark Forest) sections; zero dark headers on dark backgrounds. |
 | **2** | **Pricing Card Geometry** | Card uses `#14281f` with 1px gold border, 48px/32px padding, and contains all internal copy (no orphaned external headers). |
-| **3** | **Alumni Rate Sub-Card** | Dashed gold box is present at the base of pricing with working WhatsApp and Email links. |
+| **3** | **Alumni Sub-Card** | Dashed gold box is present at the base of pricing with working WhatsApp and Email links; zero public mention of $25/mo or legacy pills. |
 | **4** | **Photo Clearance** | No floating badges, text, or pills overlap George's face or body. |
 | **5** | **Icon Scalability** | All checkmarks are 20px stroked outline SVGs (`stroke-width: 2.5`), zero solid black/giant glyphs. |
 | **6** | **Mobile Header Focal Point** | Mobile header (`<= 640px`) contains exactly ONE primary button; secondary button is hidden. |
